@@ -11,7 +11,8 @@ class MoviesController < ApplicationController
   end
 
   def index
-    @movies = Movie.all
+    @movies = Movie.order(params[:sorting])
+    @highlightColumn = params[:sorting]
   end
 
   def new
