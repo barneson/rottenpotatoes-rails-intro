@@ -13,4 +13,8 @@ module MoviesHelper
   
   end
   
+  def selected?(rating)
+    session[:ratings].include? rating
+  end
+  
 end
